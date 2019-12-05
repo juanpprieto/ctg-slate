@@ -3,7 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SlateConfig = require('@shopify/slate-config');
-const SlateSectionsPlugin = require('@shopify/slate-sections-plugin');
+// const SlateSectionsPlugin = require('@shopify/slate-sections-plugin');
 const config = new SlateConfig(require('../../../../slate-tools.schema'));
 const injectLocalesIntoSettingsSchema = require('../utilities/inject-locales-into-settings-schema');
 
@@ -107,9 +107,9 @@ module.exports = {
       },
     ]),
 
-    new SlateSectionsPlugin({
-      from: config.get('paths.theme.src.sections'),
-      to: config.get('paths.theme.dist.sections'),
-    }),
+    // new SlateSectionsPlugin({
+    //   from: config.get('paths.theme.src.sections'),
+    //   to: config.get('paths.theme.dist.sections'),
+    // }),
   ],
 };
